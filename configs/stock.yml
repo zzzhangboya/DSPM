@@ -1,0 +1,33 @@
+training:
+  batch_size: 128
+  n_epochs: 100
+  n_iters: 2000
+  ngpu: 1
+  algo: 'dsm'
+  anneal_power: 2.0
+  save_freq: 100
+
+inpainting:
+  batch_size: 128
+  repeat_number: 20
+
+data:
+  stock_number: 300
+  time_window: 20
+  past_time_step: 10
+  future_time_step: 10
+  channels: 1
+
+model:
+  sigma_begin: 1
+  sigma_end: 0.01
+  num_classes: 10
+  batch_norm: false
+  ngf: 128
+
+optim:
+  weight_decay: 0.000
+  optimizer: "Adam"
+  lr: 0.001
+  beta1: 0.9
+  amsgrad: false
